@@ -10,14 +10,14 @@ div#site-nav.site-title-links
                 a.current(href=config.root + config.archive_dir)= __('Archive')
             else
                 a(href=config.root + config.archive_dir)= __('Archive')
-        - if (site.categories.length > 0) {
+        - if (site.categories.length > 0 && theme.categories) {
         li
             if is_current('categories/')
                 a.current(href=config.root + config.category_dir)= __('Categories')
             else
                 a(href=config.root + config.category_dir)= __('Categories')
         - }
-        - if (site.tags.length > 0) {
+        - if (site.tags.length > 0 && theme.tags) {
         li
             if is_current('tags/')
                 a.current(href=config.root + config.tag_dir)= __('Tags')
