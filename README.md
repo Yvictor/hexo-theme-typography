@@ -1,6 +1,18 @@
 hexo-theme-Typography
 ======
 
+## Update
+### Support choose show sidebar categories and tags in config.yml
+```yaml
+tags: false
+categories: true
+```
+
+### Support add Google Analytics on the your blog's root-level *_config.yml*
+```yaml
+google_analytics: G-WZQCP5GPTR
+```
+
 ![Head](https://github.com/SumiMakito/hexo-theme-typography/blob/master/_art/head.png?raw=true)
 
 ![Screenshot](https://github.com/SumiMakito/hexo-theme-typography/blob/master/_art/screenshot.png?raw=true)

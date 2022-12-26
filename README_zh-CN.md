@@ -1,6 +1,17 @@
 hexo-theme-Typography
 ======
 
+## 更新内容
+### 支持在 config.yml 中选择是否展示侧边栏的 categories 和 tag
+```yaml
+tags: false
+categories: true
+```
+### 支持直接在用户根目录的 *_config.yml* 中配置 Google Analytics
+```yaml
+google_analytics: G-WZQCP5GPTR
+```
+
 ![Head](https://github.com/SumiMakito/hexo-theme-typography/blob/master/_art/head.png?raw=true)
 
 ![Screenshot](https://github.com/SumiMakito/hexo-theme-typography/blob/master/_art/screenshot.png?raw=true)
@@ -106,6 +117,15 @@ yarn run build # yarn 用户
 
 「活版印字」主题整合了几个方便好用的功能，因此你可以使用主题目录下的 `_config.yml` 来随时进行定制。
 
+Hexo 支持在用户 `_config.yml` 中直接配置主题，建议以这种方式进行配置。
+> 我们强烈建议你将所有的主题配置集中在一处。如果你不得不在多处配置你的主题，那么这些信息对你将会非常有用：Hexo 在合并主题配置时，Hexo 配置文件中的 theme_config 的优先级最高，其次是 _config.[theme].yml 文件，最后是位于主题目录下的 _config.yml 文件。
+```
+theme: typography
+theme_config:
+  title_primary: "巷角餐馆"
+  title_secondary: "Moeyua"
+```
+
 ### 设置标题的正确姿势<sup>很重要</sup>
 
 「活版印字」主题提供了三个标题，它们分别是：`title`、`title_primary` 和 `title_secondary`。`title` 存在于 Hexo 根目录下的 `_config.yml` 中，而 `title_primary` 和 `title_secondary` 存在于主题目录下的 `_config.yml` 中。
@@ -163,11 +183,28 @@ showTag: true
 
 ### 在博客中整合 Google Analytics
 
-在 `themes/typography/source/js/google-analytics.js` 中找到一下行：
+~~在 `themes/typography/source/js/google-analytics.js` 中找到一下行：~~
 
-`ga('create', 'UA-73442912-1', 'auto');`
+~~`ga('create', 'UA-73442912-1', 'auto');`~~
 
-并将 `UA-73442912-1` 替换为你的 ID 即可。
+~~并将 `UA-73442912-1` 替换为你的 ID 即可。~~
+在 Hexo 配置文件中添加自己的 `衡量 ID`
+```yaml
+google_analytics: G-WZQCP5GPTR
+```
+最终会在网站的每个 HTML 文件的 `head` 标签下添加下列代码。
+```html
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WZQCP5GPTR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WZQCP5GPTR');
+</script>
+```
+
 
 ### 便于搜索引擎优化（SEO）的可选文章描述
 
@@ -234,18 +271,6 @@ yarn run build # yarn 用户
 
 - [Makito](https://github.com/SumiMakito)
 - [pmtao](https://github.com/pmtao)
-
-## 支持开发者
-
-咱是一个没有过多收入的学生开发者。
-
-如果你喜欢我的主题，欢迎赞助我一杯焦糖玛奇朵，谢谢你。`_(:з」∠)_` 
-
-<img width="300" src="https://raw.githubusercontent.com/SumiMakito/Misc/master/wechat-2.png" alt="WeChat QR code">
-
-<img width="240" src="https://raw.githubusercontent.com/SumiMakito/Misc/master/alipay-2.jpg" alt="Alipay QR code">
-
-> WeChat 和 支付宝 都可以哦
 
 ## 许可协议
 
