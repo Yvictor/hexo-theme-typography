@@ -32,11 +32,12 @@ link(rel="stylesheet", href= url_for('css/bootstrap.min.css'))
 link(rel="stylesheet", href= url_for('css/font-awesome.min.css'))
 //- link(rel="stylesheet", href= url_for('css/typography-custom-font.css'))
 
-link(rel="stylesheet", href= url_for('css/style.css'))
-link(rel="stylesheet", href= url_for('css/style-dark.css'), media="(prefers-color-scheme: dark)")
+if theme.themeStyle == "light"
+    link(rel="stylesheet", href= url_for('css/style.css'))
+if theme.themeStyle == "dark"
+    link(rel="stylesheet", href= url_for('css/style-dark.css'))
+if theme.themeStyle == "auto"
+    link(rel="stylesheet", href= url_for('css/style.css'))
+    link(rel="stylesheet", href= url_for('css/style-dark.css'), media="(prefers-color-scheme: dark)")
 
-//- if theme.themeStyle == "light"
-//-     link(rel="stylesheet", href= url_for('css/style.css'))
-//- if theme.themeStyle == "dark"
-//-     link(rel="stylesheet", href= url_for('css/style-dark.css'))
 link(rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml")
