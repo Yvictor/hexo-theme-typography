@@ -354,6 +354,13 @@ footer * {
 .post-container {
   margin: 0 0 30px 0;
   font-weight: normal;
+  .gist-file {
+    border: none !important;
+    .gist-data {
+      background-color: rgba(0, 0, 0, 0) !important;
+    }
+  }
+    
 }
 
 .post-title {
