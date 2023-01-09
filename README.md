@@ -13,6 +13,10 @@ categories: true
 google_analytics: G-WZQCP5GPTR
 ```
 
+### Prism
+hexo-prism-plugin 作者已经不再维护，Prism 改为使用 Hexo 内建的版本。
+> 暂时不支持 prism 插件
+
 ![Head](https://github.com/SumiMakito/hexo-theme-typography/blob/master/_art/head.png?raw=true)
 
 ![Screenshot](https://github.com/SumiMakito/hexo-theme-typography/blob/master/_art/screenshot.png?raw=true)
@@ -248,21 +252,7 @@ As for the pug templates inside `theme/typography/layout`, just edit them and re
 
 - [Makito](https://github.com/SumiMakito)
 - [pmtao](https://github.com/pmtao)
-
-## Support me
-
-I am a freelance student developer. (with bloody little income)
-
-Please consider buy me a cup of caramel macchiato if you really like my work. `_(:з」∠)_` 
-
-Thank you very much.
-
-<img width="300" src="https://raw.githubusercontent.com/SumiMakito/Misc/master/wechat-2.png" alt="WeChat QR code">
-
-<img width="240" src="https://raw.githubusercontent.com/SumiMakito/Misc/master/alipay-2.jpg" alt="Alipay QR code">
-
-> WeChat and Alipay are both accepted.
-
+- [Moeyua](https://github.com/moeyua)
 ## License
 
 © 2017-2018 Makito
